@@ -203,7 +203,7 @@ class TrainingHelper(object):
         if self.task == Task.nugget:
             return metrics["nugget"]["rnss"]
         if self.task == Task.quality:
-            return np.mean(metrics["quality"]["rsnod"].values())
+            return np.mean(list(metrics["quality"]["rsnod"].values()))
 
 
 
