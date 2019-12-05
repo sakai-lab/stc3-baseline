@@ -6,19 +6,19 @@ This repo is a LSTM+BoW baseline model for [Nugget Detection (ND) and Dialogue Q
 
 ### Dialogue Quality  Model
 
-Each Dialogue turn is represented as a N x D matrix where N is the number of tokens and D is the embedding dimensionality.  To convert each turn matrix into a vector, we simply apply Bog of Words, which is taking the sum of each word vectors. Then, stacked bidirectional LSTMs are empoyed to encode turn vectors to obtain the dialogue representation. Finally, the dialogue representation are feed into connected layers to estimate quality score distributions.
+Each Dialogue turn is represented as a N x D matrix where N is the number of tokens and D is the embedding dimensionality.  To convert each turn matrix into a vector, we simply apply Bog of Words, which is taking the sum of each word vectors. Then, stacked bidirectional LSTMs are employed to encode turn vectors to obtain the dialogue representation. Finally, the dialogue representation are feed into connected layers to estimate quality score distributions.
 
 A-score: Accomplishment Score (2, 1, 0, -1, -2).
 
-E-score: Efficienty Score (2, 1, 0, -1, -2).
+E-score: Efficiency Score (2, 1, 0, -1, -2).
 
-S-Score: Satisfcation score (2, 1, 0, -1, -2).
+S-Score: Satisfaction score (2, 1, 0, -1, -2).
 
 ![quality model](img/quality.jpeg)
 
 ### Nugget Detection Model
 
-Nugget detection baseline model is similar to the model abolve, but we predict the nugget distrubtion for  customer turns and helpdesk turns.
+Nugget detection baseline model is similar to the model above, but we predict the nugget distribution for  customer turns and helpdesk turns.
 
 - Customer turn nugget types: Trigger Nugget (CNUG0), Not A Nugget (CNaN), Regular Nugget (CNUG), and Goal Nugget (CNUG*)
 
